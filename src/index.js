@@ -1,13 +1,39 @@
+// IMPORTACIONES
+
+// Modulos / Depencendia 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
+// Estilos
 import './index.css';
+
+// Componentes
+import NavBar from './components/navbar/NavBar.js';
 import App from './App';
+import Footer from './components/footer/Footer';
+
+// Web vitales / Core
 import reportWebVitals from './reportWebVitals';
 
+
+
+
+
+//        LOGICA
+
+// Selector base de JS
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+// Aca se renderiza la app
 root.render(
   <React.StrictMode>
-    <App />
+
+    <NavBar/>
+
+    <App/>
+
+    <Footer/>
+
   </React.StrictMode>
 );
 

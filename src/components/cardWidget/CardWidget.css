@@ -1,0 +1,17 @@
+.carrito_numero{
+    color: rgb(9, 97, 211);
+    font-size: 18px;
+    margin-top: 22px;
+    margin-left: 20px;
+}
+
+.carrito_icon{
+    color: white;
+    font-size: 25px;
+    margin-right: 5px;
+}
+
+.carrito_icon:hover{
+    color: #007caf;
+    cursor: pointer;
+}
