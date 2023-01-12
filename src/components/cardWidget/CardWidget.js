@@ -4,9 +4,10 @@
 
 // Estilos
 import './CardWidget.css'
-import { FaShoppingCart } from "react-icons/fa";
+
 
 // Componentes
+import { FaShoppingCart } from "react-icons/fa";
 
 // Core
 
@@ -18,9 +19,13 @@ import { FaShoppingCart } from "react-icons/fa";
 // Función constructora
 const CardWidget = (props) =>{    
     return(
-        <div className='carrito_numero'>
-            <a><FaShoppingCart className='carrito_icon'/></a>
-            {props.cantidad}
+        <div className='carrito'>
+            <div>
+                <FaShoppingCart className='carrito_icon'/>
+            </div>
+            <div className='carrito_numero'>
+                {props.cantidad}
+            </div>
         </div>
     )
 }

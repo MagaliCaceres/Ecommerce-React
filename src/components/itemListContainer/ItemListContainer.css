@@ -1,45 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Scada&display=swap');
-
-
-*{
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    text-decoration: none;
-    font-family: 'Scada', sans-serif;
+.contenedor {
+    padding: 10px 0px;
+    margin: 20px;
 }
 
-.main{
-    height: 560px;
-    width: 100%;
-    background-image: url(../../../public/img/ry-x-live.jpg);
-    background-size: cover;
+.encabezado_lista_productos h2 {
+    font-family: 'Exo', sans-serif;
+    margin-left: 30px;
+    font-size: 70px;
+    color: #d25a1e;
+    text-shadow: 1px 0px 2px #9b4909;
 }
 
-
-.main div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.main_button{
-    margin-top: 450px;
-    padding: 12px;
-    font-size: 18px;
-    background-color: rgba(255, 255, 255, 0.144);
-    font-weight: 600;
-    text-shadow: rgba(8, 8, 8, 0.22) 0.1em 0.1em 0.2em;
-    border-bottom-right-radius: 10px;
-}
-
-.main_button:hover{
-    cursor: pointer;
-    background-color: white;
-}
-
-.main_button_icon{
-    margin-left: 5px;
-    padding-top: 2px;
+.encabezado_lista_productos p {
+    font-family: 'Exo', sans-serif;
+    margin-left: 30px;
+    font-size: 30px;
+    color: #273139;
+    text-shadow: -1px 0px 0.5px #273139;
 }
 

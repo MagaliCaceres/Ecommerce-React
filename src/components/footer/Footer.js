@@ -26,18 +26,18 @@ const Footer = () =>{
             <div className='footer_division'>
                 <div className='footer_contact'>
                     <label>Suscríbete a la newsletter</label>
-                    <input type="email"  autocomplete="off" placeholder="email@example.com...."></input> 
+                    <input type="email" placeholder="email@example.com...."></input> 
                 </div>
                 <div className='footer_redes'>
-                    <a><FaYoutube className='redes_icon'/></a>
-                    <a><FaTiktok className='redes_icon'/></a>
-                    <a><FaTwitter className='redes_icon'/></a>
-                    <a><FaInstagram className='redes_icon'/></a>
+                    <a href="./Footer.js"><FaYoutube className='redes_icon'/></a>
+                    <a href="./Footer.js"><FaTiktok className='redes_icon'/></a>
+                    <a href="./Footer.js"><FaTwitter className='redes_icon'/></a>
+                    <a href="./Footer.js"><FaInstagram className='redes_icon'/></a>
                 </div>
             </div>
             <div className='footer_copyright'>
                 <p>
-                <FaCopyright className='copyright_icon'/>2022 - RY X Tienda Oficial - Magali Caceres.
+                <FaCopyright className='copyright_icon'/>2022 - Vibes Tienda De Vinilos - Sitio Web Desarrollado Por Magali Caceres.
             </p>
             </div>
 

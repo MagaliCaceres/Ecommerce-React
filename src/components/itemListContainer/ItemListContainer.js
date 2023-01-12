@@ -4,9 +4,9 @@
 
 // Estilos
 import './ItemListContainer.css'
-import { FaShoppingBag } from "react-icons/fa";
 
 // Componentes
+import ItemList from '../itemList/ItemList.js'
 
 
 // Core
@@ -15,16 +15,16 @@ import { FaShoppingBag } from "react-icons/fa";
 //        LOGICA
 
 // Función constructora
-const ItemListContainer = (props) =>{
-    
+const ItemListContainer = () =>{
+
     return(
-        <main className='main'>
-            <div>
-                <button className='main_button'>
-                    {props.greeting}<FaShoppingBag className='main_button_icon'/>
-                </button>
+        <div className='contenedor'>
+            <div className='encabezado_lista_productos'>
+                <h2>Productos</h2>
+                <p>Todos Nuestros Productos</p>
             </div>
-        </main>
+            <ItemList/>
+        </div>
     )
 }
 

@@ -1,0 +1,52 @@
+.contador{
+    display: block;
+}
+
+.contador_cantidad{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: #27313957 solid 1px;
+}
+
+.contador_cantidad p{
+    width: 60px;
+    color: #273139;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.contador_cantidad button{
+    border: none;
+    background-color: transparent;
+    color: #e46322;
+    font-weight: 600;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.contador_agregar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6px;
+}
+
+.contador_agregar button{
+    width: 100%;
+    border-radius: 20px;
+    padding: 6px 0px;
+    background-color: #273139;
+    color: #e46322;
+    text-shadow: 0.2px 0px 0.5px #e46322;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+.contador_agregar button:hover{
+    color: #efefef;
+}

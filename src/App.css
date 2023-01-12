@@ -1,8 +1,3 @@
-*{
-  margin: 0;
-  padding: 0;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -22,49 +17,3 @@
     transform: rotate(360deg);
   }
 }
-
-
-/* HEADER */
-
-
-/* BARRA DE NAVEGACIÓN */
-/* .navbar{
-  display: flex;
-  justify-content: space-between;
-  padding: 16px;
-}
-
-.logo{
-  font-size: 150%;
-}
-
-.menu{
-  font-size: 130%;
-  margin: 10px;
-}
-
-.menu_link{
-  margin: 0px 10px;
-  font-weight: 600;
-} */
-
-
-/* MAIN */
-/* .main_contenedor{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(https://www.rollingstone.fr/wp-content/uploads/2022/09/ry-x-live.jpg);
-  background-size: cover;
-  z-index: -1;
-}
-
-
-.main_titulo{
-  margin-left: 60px;
-  margin-top: 50px;
-  font-size: 500%;
-  
-} */

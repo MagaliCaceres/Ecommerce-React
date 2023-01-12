@@ -1,17 +1,21 @@
-.carrito_numero{
-    color: rgb(9, 97, 211);
-    font-size: 18px;
-    margin-top: 22px;
-    margin-left: 20px;
+.carrito{
+    display: flex;
+    padding: 20px 0px;
+    margin-top: 6px;
 }
 
 .carrito_icon{
-    color: white;
+    color: #273139;
     font-size: 25px;
-    margin-right: 5px;
+    margin-top: -2px;
 }
 
-.carrito_icon:hover{
-    color: #007caf;
-    cursor: pointer;
+.carrito_numero{
+    color: #d25a1e;
+    background-color: #273139;
+    border-radius: 50px;
+    margin: 0px 8px;
+    padding: 2px 8px;
+    font-weight: 600;
 }
+

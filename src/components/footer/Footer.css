@@ -1,15 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Scada&display=swap'); 
-
-*{
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    text-decoration: none;
-    font-family: 'Scada', sans-serif;
-}
-
 .footer{
-    background-color: black;
+    background-color: #d25a1e;
     width: 100%;
     padding: 20px 0px;
 }
@@ -24,7 +14,7 @@
 }
 
 .footer_contact label{
-    color: white;
+    color: #273139;
     display: block;
     padding: 10px 0px;
     font-size: 20px;
@@ -35,8 +25,8 @@
     font-size: 18px;
     background-color: transparent;
     padding: 12px;
-    border: 1px solid white;
-    color: white;
+    border: 1px solid #273139;
+    color: #273139;
 }
 
 .footer_redes{
@@ -50,23 +40,24 @@
 }
 
 .redes_icon{
-    color: white;
+    color: #273139;
     font-size: 25px;
 }
 
 .redes_icon:hover{
-    color: #007caf;
+    color: #e0e0e0;
     cursor: pointer;
 }
 
 .footer_copyright{
-    border-top: 0.5px rgba(255, 255, 255, 0.257) solid;
+    border-top: 0.5px #273139 solid;
     margin: 0px 40px;
     margin-top: 20px;
 }
 
 .footer_copyright p{
-    color: rgba(255, 255, 255, 0.257);
+    color: #273139;
+    font-weight: 600;
     text-align: center;
     margin-top: 30px;
     font-size: 0.7rem;

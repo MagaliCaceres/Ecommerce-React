@@ -1,0 +1,74 @@
+.info_principal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 120px 80px;
+}
+
+.enlaces_atras a{
+    color: #e46322;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+
+.enlaces_atras a:hover,
+.enlaces_atras a:focus{
+    background-size: 100% 2px;
+}
+
+.contenedor_img img{
+    width: 550px;
+    height: 400px;
+}
+
+.contenedor_info{
+    padding-left: 80px;
+}
+
+.info_fecha{
+    color: #273139;
+    font-weight: 600;
+}
+
+.info_nombre{
+    color: #e46322;
+    margin: 6px 00px;
+    font-size: 38px;
+}
+
+.info_precio{
+    color: #273139;
+    margin: 6px 00px;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.info_descripcion{
+    color: #273139;
+    font-size: 18px;
+    margin: 8px 00px;
+}
+
+.lista_info_genero,
+.lista_info_canciones,
+.lista_info_duracion,
+.lista_info_sello,
+.lista_info_categoria{
+    font-size: 18px;
+    color: #e46322;
+    margin: 6px 00px;
+    text-shadow: 0px 0px 1px #9b4909;
+}
+
+.lista_info_genero p,
+.lista_info_canciones p,
+.lista_info_duracion p,
+.lista_info_sello p,
+.lista_info_categoria p{
+    display: inline;
+    color: #273139;
+    text-shadow: none;
+}
