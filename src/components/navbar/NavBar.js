@@ -1,7 +1,9 @@
 //        IMPORTACIONES
 
 // Modulos
+
 import { Link } from 'react-router-dom'
+
 
 // Estilos
 import './NavBar.css'
@@ -17,14 +19,13 @@ import CardWidget from '../cardWidget/CardWidget'
 
 // Función constructora
 const NavBar = () =>{
-    
+
     return(
-        
 
         <header>
             <nav className="navbar">
                 <div className="logo">
-                    <Link to="/"><img src='/img/vibesLogo.png'></img></Link>
+                    <Link to="/"><img alt="Logo Vinilo" src='/img/vibesLogo.png'></img></Link>
                 </div>
                 <div className="menu">
                     <ul>
@@ -33,8 +34,10 @@ const NavBar = () =>{
                         <div className="dropdown">
                             <button className="menu_link_button menu_link">Categorias</button>     
                             <div className="dropdown-content">
-                                <a href="#">Vinilos</a>
-                                <a href="#">Discos</a>
+                                <Link to="/categoria/electronics">electronics</Link>
+                                <Link to="/categoria/jewelery">jewelery</Link>
+                                <Link to="/categoria/men's clothing">men's clothing</Link>
+                                <Link to="/categoria/women's clothing">women's clothing</Link>
                             </div>
                         </div>
                         <li className="menu_link"><Link to="/nosotros">Nosotros</Link></li>

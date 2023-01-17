@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster+Two');
+
+/* MAIN */
+.home {
+    display: flex;
+    justify-content: space-between;
+    background-color: #273139;
+    position: relative;
+    z-index: 0;
+    padding: 50px 70px;
+    overflow: hidden;
+}
+
+.container {
+    
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    max-width: 30rem;
+
+}
+
+.loader {
+    max-width: 50rem;
+    width: 150%;
+}
+
+circle {
+    fill: none;
+    stroke-width: 10;
+    -webkit-animation-name: preloader;
+    animation-name: preloader;
+    -webkit-animation-duration: 3s;
+    animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    transform-origin: 170px 170px;
+    will-change: transform;
+}
+
+circle:nth-of-type(1) {
+    stroke-dasharray: 550px;
+}
+
+circle:nth-of-type(2) {
+    stroke-dasharray: 500px;
+}
+
+circle:nth-of-type(3) {
+    stroke-dasharray: 450px;
+}
+
+circle:nth-of-type(4) {
+    stroke-dasharray: 300px;
+}
+
+circle:nth-of-type(1) {
+    -webkit-animation-delay: -0.15s;
+    animation-delay: -0.15s;
+}
+
+circle:nth-of-type(2) {
+    -webkit-animation-delay: -0.3s;
+    animation-delay: -0.3s;
+}
+
+circle:nth-of-type(3) {
+    -webkit-animation-delay: -0.45s;
+    animation-delay: -0.45s;
+}
+
+circle:nth-of-type(4) {
+    -webkit-animation-delay: -0.6s;
+    animation-delay: -0.6s;
+}
+
+@-webkit-keyframes preloader {
+    50% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes preloader {
+    50% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.home_texto {
+    margin-top: 10px;
+    padding: 0px 20px;
+    color: #fff;
+}
+
+.home_texto h2 {
+    font-size: 130px;
+    letter-spacing: 15px;
+    padding: 6px;
+    text-shadow: 0px 0px 3px #273139c3;
+}
+
+.vinyl {
+    margin-top: -30px;
+}
+
+.vibes {
+    color: #d25a1e;
+}
+
+.home_texto h3 {
+    letter-spacing: 5px;
+    font-size: 40px;
+    margin-top: -20px;
+    margin-left: 20px;
+}
+
+.home_texto p {
+    font-size: 25px;
+    margin-left: 20px;
+}
+
+
+/* PRODUCTOS */
+.home_productos {
+    padding: 20px;
+    height: 300px;
+    background-color: #273139;
+}
+
+.home_productos p {
+    color: #d25a1e;
+    font-weight: 600;
+    font-size: 40px;
+    text-shadow: 0px 0px 2px #d25a1e62;
+}
+
+
+/* INFO */
+
+.tarjetas_info {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #d25a1e;
+    text-align: center;
+    padding:  20px 0px;
+}
+
+.tarjeta {
+    padding: 20px 50px;
+    width: 100%;
+}
+
+.tarjeta_icon {
+    color: #273139;
+    font-size: 65px;
+}
+
+
+.tarjeta_info h3 {
+    letter-spacing: 4px;
+    text-shadow: none;
+    color: #273139;
+    font-size: 25px;
+    margin: 4px 0px;
+}
+
+.tarjeta_info p {
+    color: #273139;
+    font-size: 20px;
+}

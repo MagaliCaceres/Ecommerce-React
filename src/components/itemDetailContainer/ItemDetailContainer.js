@@ -8,7 +8,7 @@ import { useParams } from 'react-router-dom'
 import './ItemDetailContainer.css'
 
 // Componentes
-import ItemDeatil from '../itemDetail/ItemDetail'
+import ItemDetail from '../itemDetail/ItemDetail'
 
 // Core
 
@@ -18,24 +18,22 @@ import ItemDeatil from '../itemDetail/ItemDetail'
 // Función constructora
 const ItemDetailContainer = () =>{
 
-    const [productos,setProductos] = useState([])
+    const [productos, setProductos] = useState([])
 
     const {productoId} = useParams()
 
-    useEffect(() => {
+    useEffect(() =>{
         
-        fetch(`/productos.json/${productoId}`)
-        .then(res => res.json())
-        .then(productos => setProductos(<ItemDeatil key={productos.id} id={"producto" + productos.id} data={productos}/>))
+        fetch(`https://fakestoreapi.com/products/${productoId}`)
+            .then(res=>res.json())
+            .then(productos=>setProductos(<ItemDetail key={productos.id} id={"producto" + productos.id} data={productos}/>))
+    }, [productoId])
 
-    },[])
-    
-
-    
     return(
         <article>
             {productos}
         </article>
+        
     )
 }
 

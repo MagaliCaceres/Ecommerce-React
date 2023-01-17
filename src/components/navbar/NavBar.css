@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Scada&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@500&display=swap');
+
+
 /* BARRA DE NAVEGACIÓN */
 .navbar{
     display: flex;
-    justify-content:space-around;
-    background-color: #d25a1e;
+    justify-content:space-evenly;
+    background-color: #273139;
 }
 
 
@@ -10,7 +14,7 @@
 
 .logo img{
     width: 60px;
-    margin: 4px 0px;
+    margin: 12px 0px;
 }
 
 
@@ -27,7 +31,7 @@
 
 .menu_link a {
     font-size: 20px;
-    color: #273139;
+    color: #d25a1e;
     font-weight: 600;
     background-image: linear-gradient(currentColor, currentColor);
     background-position: 0% 100%;
@@ -49,7 +53,7 @@
     text-shadow: 0px 0px 0px #9b4909;
     margin: 0px;
     background-color: transparent;
-    color: #273139;
+    color: #d25a1e;
     font-size: 20px;
     cursor: pointer;
     border: none;
@@ -63,6 +67,7 @@
 }
 
 .dropdown-content {
+    z-index: 1;
     display: none;
     position: absolute;
     background-color: #d25a1e;
@@ -84,4 +89,13 @@
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+
+
+/* CARRITO */
+
+.carrito{
+    text-shadow: 0px 0px 0px #9b4909;
+    display: flex;
 }

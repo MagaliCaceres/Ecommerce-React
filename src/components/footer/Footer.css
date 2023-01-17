@@ -1,5 +1,5 @@
 .footer{
-    background-color: #d25a1e;
+    background-color: #273139;
     width: 100%;
     padding: 20px 0px;
 }
@@ -10,11 +10,13 @@
 }
 
 .footer_contact{
-    padding-left: 150px;
+    padding-left: 80px;
 }
 
-.footer_contact label{
-    color: #273139;
+.footer_contact label,
+.contacto{
+    color: #d25a1e;
+    font-weight: 600;
     display: block;
     padding: 10px 0px;
     font-size: 20px;
@@ -25,8 +27,26 @@
     font-size: 18px;
     background-color: transparent;
     padding: 12px;
-    border: 1px solid #273139;
+    border: 1.5px solid #d25a1e;
     color: #273139;
+}
+
+.contacto{
+    margin-left: 100px;
+}
+
+.contacto_info{
+    padding: 12px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.contacto_info a{
+    color: #d25a1e;
+}
+
+.contacto_info a:hover{
+    color: #fff;
 }
 
 .footer_redes{
@@ -40,7 +60,7 @@
 }
 
 .redes_icon{
-    color: #273139;
+    color: #d25a1e;
     font-size: 25px;
 }
 
@@ -50,14 +70,13 @@
 }
 
 .footer_copyright{
-    border-top: 0.5px #273139 solid;
+    border-top: 0.5px #d25a1e3e solid;
     margin: 0px 40px;
     margin-top: 20px;
 }
 
 .footer_copyright p{
-    color: #273139;
-    font-weight: 600;
+    color: #d25a1eba;
     text-align: center;
     margin-top: 30px;
     font-size: 0.7rem;

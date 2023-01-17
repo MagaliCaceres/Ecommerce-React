@@ -5,17 +5,17 @@
 }
 
 .carrito_icon{
-    color: #273139;
-    font-size: 25px;
-    margin-top: -2px;
+    color: #d25a1e;
+    font-size: 30px;
+    margin: 0px -7px;
 }
 
 .carrito_numero{
-    color: #d25a1e;
-    background-color: #273139;
-    border-radius: 50px;
-    margin: 0px 8px;
-    padding: 2px 8px;
-    font-weight: 600;
+    color: #273139;
+    background-color: #d25a1e;
+    border-radius: 100px;
+    margin: 8px 10px;
+    padding: 1px 8px;
+    font-weight: 900;
 }
 

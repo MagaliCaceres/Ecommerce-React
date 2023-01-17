@@ -22,6 +22,7 @@
 .contenedor_img img{
     width: 550px;
     height: 400px;
+    margin: 20px 0px;
 }
 
 .contenedor_info{
@@ -40,14 +41,14 @@
 }
 
 .info_precio{
-    color: #273139;
+    color: #fff;
     margin: 6px 00px;
     font-size: 30px;
     font-weight: 600;
 }
 
 .info_descripcion{
-    color: #273139;
+    color: #fff;
     font-size: 18px;
     margin: 8px 00px;
 }

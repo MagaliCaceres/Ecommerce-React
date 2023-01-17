@@ -8,13 +8,14 @@
 
 
 .carta_contenedor{
+    background-color: rgb(230, 230, 230);
     padding: 20px 6px;
-    box-shadow: 0.5px 0.9px 2px #192025;
+    box-shadow: 0.5px 0.9px 2px #8ab1cc;
     border-radius: 30px;
 }
 
 .carta_contenedor:hover{
-    box-shadow: -3px 0.5px 10px #192025;
+    box-shadow: -3px 0.5px 10px #476073;
 }
 
 .carta_encabezado {
