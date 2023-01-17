@@ -19,6 +19,62 @@
     background-size: 100% 2px;
 }
 
+.contenedor_img{
+    width: 700px;
+}
+.contenedor_img img{
+    height: 400px;
+    margin: 20px 30px;
+}
+
+.contenedor_info{
+    padding-left: 80px;
+}
+
+.info_nombre{
+    color: #e46322;
+    margin: 6px 00px;
+    font-size: 38px;
+}
+
+.info_precio{
+    color: #fff;
+    margin: 6px 00px;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.info_descripcion{
+    color: #fff;
+    font-size: 18px;
+    margin: 8px 00px;
+}
+
+
+
+
+/* 
+.info_principal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 120px 80px;
+}
+
+.enlaces_atras a{
+    color: #e46322;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+
+.enlaces_atras a:hover,
+.enlaces_atras a:focus{
+    background-size: 100% 2px;
+}
+
 .contenedor_img img{
     width: 550px;
     height: 400px;
@@ -72,4 +128,4 @@
     display: inline;
     color: #273139;
     text-shadow: none;
-}
+} */

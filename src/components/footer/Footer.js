@@ -39,10 +39,10 @@ const Footer = () =>{
                     </div>
                 </div>
                 <div className='footer_redes'>
-                    <a href="./Footer.js"><FaWhatsapp className='redes_icon'/></a>
-                    <a href="./Footer.js"><FaTiktok className='redes_icon'/></a>
-                    <a href="./Footer.js"><FaTwitter className='redes_icon'/></a>
-                    <a href="./Footer.js"><FaInstagram className='redes_icon'/></a>
+                    <a href="#"><FaWhatsapp className='redes_icon'/></a>
+                    <a href="#"><FaTiktok className='redes_icon'/></a>
+                    <a href="#"><FaTwitter className='redes_icon'/></a>
+                    <a href="#"><FaInstagram className='redes_icon'/></a>
                 </div>
                 
             </div>

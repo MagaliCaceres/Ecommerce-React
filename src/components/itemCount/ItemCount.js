@@ -24,6 +24,7 @@ const ItemCount = (props) =>{
     const sumarUno = () => {
         if(contador < props.stock){
             setContador(contador + 1)
+            props.cantidadAComprar(contador)
         }
     }
 
@@ -31,13 +32,10 @@ const ItemCount = (props) =>{
     const restarUno = () => {
         if(contador > 0){
             setContador(contador - 1)
+            props.cantidadAComprar(contador)
         }
     }
 
-    // Funcion agregar x cantidad de Productos
-    const agregar = () => {
-        console.log(contador)
-    }
     
 
     return(
@@ -46,9 +44,6 @@ const ItemCount = (props) =>{
                 <button onClick={restarUno}>-</button>
                 <p>{contador}</p>
                 <button onClick={sumarUno}>+</button>
-            </div>
-            <div className='contador_agregar'>
-                <button onClick={agregar}>Agregar</button>
             </div>
         </div>
     )

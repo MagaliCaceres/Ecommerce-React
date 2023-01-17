@@ -14,6 +14,7 @@ import Home from './components/home/Home'
 import ItemListContainer from './components/itemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/itemDetailContainer/ItemDetailContainer';
 import AboutUs from './components/aboutUs/AboutUs'
+import Cart from './components/cart/Cart';
 import Footer from './components/footer/Footer';
 // import App from './App';
 
@@ -48,6 +49,8 @@ root.render(
       <Route exact path='/categoria/:categoriaId' element={<ItemListContainer/>}/>
 
       <Route exact path='/nosotros' element={<AboutUs/>}/>
+
+      <Route exact path='/carrito' element={<Cart/>}/>
 
     </Routes>
 

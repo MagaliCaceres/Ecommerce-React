@@ -4,3 +4,38 @@
     align-items: center;
     padding: 20px;
 }
+
+.categorias {
+    margin-top: -30px;
+    position: relative;
+    width: 40px;
+    margin-left: 88%;
+}
+
+.icono_categoria{
+    font-size: 30px;
+}
+
+.categorias-content {
+    display: none;
+    position: absolute;
+    background-color: #d25a1e;
+    min-width: 160px;
+    padding-bottom: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.categorias-content a {
+    font-size: 20px;
+    color: #273139;
+    padding: 12px 16px;
+    display: block;
+}
+
+.categorias-content a:hover {
+    color: #e0e0e0;
+    text-shadow: 0px 0px 0px #9b4909;}
+
+.categorias:hover .categorias-content {
+    display: block;
+}
