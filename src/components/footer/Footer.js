@@ -35,14 +35,14 @@ const Footer = () =>{
                     <h4>Contactanos</h4>
                     <div className='contacto_info'>
                         <p><MdCall/> (+54) 11 3000-1111</p>
-                        <a href='#'><MdOutlineAlternateEmail/> vibesVinilos@gmail.com</a>
+                        <a href='#/'><MdOutlineAlternateEmail/> vibesVinilos@gmail.com</a>
                     </div>
                 </div>
                 <div className='footer_redes'>
-                    <a href="#"><FaWhatsapp className='redes_icon'/></a>
-                    <a href="#"><FaTiktok className='redes_icon'/></a>
-                    <a href="#"><FaTwitter className='redes_icon'/></a>
-                    <a href="#"><FaInstagram className='redes_icon'/></a>
+                    <a href="#/"><FaWhatsapp className='redes_icon'/></a>
+                    <a href="#/"><FaTiktok className='redes_icon'/></a>
+                    <a href="#/"><FaTwitter className='redes_icon'/></a>
+                    <a href="#/"><FaInstagram className='redes_icon'/></a>
                 </div>
                 
             </div>

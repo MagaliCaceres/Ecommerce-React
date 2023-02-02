@@ -27,7 +27,7 @@ const AboutUs = () =>{
                         <p>"Afirmamos que el amor a la música no es más que amor a aquellos momentos donde somos conscientes que estamos vivos.</p>
                     </div>
                     <div className='cabecera_imagen'>
-                        <img src='/img/nosotros.png'></img>
+                        <img src='/img/nosotros.png' alt='apilación de discos y vinilos'></img>
                     </div>
                 </div>
                 <div className='texto_nosotros'>
@@ -36,10 +36,15 @@ const AboutUs = () =>{
                     <br/>
                     <p>Nuestro deseo es llevar la experiencia de la música a su mejor nivel; proporcionando aquellos elementos que por mucho tiempo formaron parte de nuestra vida; como tambien proporcionar la vivencia de esta experiencia a las nuevas generaciones. </p>
                     <br/>
-                    <p>Como participantes de la comunidad melómana, buscamos que todos los usuarios puedan disfrutar de sus artistas preferidos. Sin limite de decadas, géneros, estilos, artistas y bandas.</p>
+                    <p>Como participantes de la comunidad melómana, buscamos que todos los usuarios puedan disfrutar de sus artistas preferidos. Sin limite de decadas, géneros, estilos, artistas o bandas.</p>
+                    <br/>
+                    <p>Nos caracterizamos por la busqueda de brindar nuevos horizontes musicales a nuestros usuarios. Desde la experiencia de integrar a los menos consumidores mainstream a los sonidos de hoy en día en una tecnología de otra decada, como nutrir a los mas jovenes de la experiencia de sentirse dentro de las decadas pasadas. </p>
                     <br/>
                     <p>Hoy nos encontramos en busqueda de abrirnos camino hacia toda Latinoamérica ¡Y todo gracias a los más de 30.000 usuarios que confian en nuestro proyecto. </p>
                 </div>
+            </div>
+            <div className='pieDePagina_imagen'>
+                <img src='/img/nosotrosLogo.png' alt='Texto Vibes Vinyl'></img>
             </div>
             <div className='nosotros_cartel'>
                 <p>¡Te invitamos a ser parte de esta comunidad melómana!</p>

@@ -1,4 +1,4 @@
-.carta{
+/* .carta{
     margin: 20px 10px;
     padding: 0px 20px;
     width: 90%;
@@ -18,7 +18,7 @@
 
 .carta_encabezado {
     margin: 0px 10px;
-    display: flex;
+    display: flex-end;
     justify-content: end;
 }
 
@@ -76,12 +76,12 @@
     font-weight: 600;
     text-align: end;
     margin-right: 40px;
-}
+} */
 
 
 
 
-/* .carta{
+.carta{
     display: inline-block;
     margin: 0px 10px;
     padding: 10px 20px;
@@ -162,4 +162,4 @@
     text-align: center;
     margin-top: 10px;
 }
- */
+

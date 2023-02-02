@@ -2,11 +2,11 @@
 
 // Modulos
 
+
 // Estilos
-import './Cart.css'
+import './CartItem.css'
 
 // Componentes
-
 
 
 // Core
@@ -15,13 +15,13 @@ import './Cart.css'
 //        LOGICA
 
 // Función constructora
-const Cart = (props) =>{
+const CartItem = () =>{
     
     return(
-        <p>Cart</p>
+        <></>
     )
 }
 
 
 //        EXPORTACIÓN
-export default Cart
+export default CartItem

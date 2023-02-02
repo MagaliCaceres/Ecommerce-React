@@ -3,6 +3,8 @@
 // Modulos
 import { useEffect, useState} from 'react'
 import { useParams } from 'react-router-dom'
+import { doc, getDoc } from "firebase/firestore"
+import { db } from "../../services/firebase"
 
 // Estilos
 import './ItemDetailContainer.css'
@@ -18,20 +20,26 @@ import ItemDetail from '../itemDetail/ItemDetail'
 // Función constructora
 const ItemDetailContainer = () =>{
 
-    const [productos, setProductos] = useState([])
-
     const {productoId} = useParams()
 
-    useEffect(() =>{
-        
-        fetch(`https://fakestoreapi.com/products/${productoId}`)
-            .then(res=>res.json())
-            .then(productos=>setProductos(<ItemDetail key={productos.id} id={"producto" + productos.id} data={productos}/>))
-    }, [productoId])
+    const [item, setItem] = useState({});
+
+    useEffect(()=>{
+        const getProducto = async()=>{
+            const queryRef = doc(db,"listaDeProducto",productoId);
+            const response = await getDoc(queryRef);
+            const newDoc = {
+                id:response.id,
+                ...response.data()
+            }
+            setItem(newDoc);
+        }
+        getProducto();
+    },[productoId])
 
     return(
         <article>
-            {productos}
+            <ItemDetail item={item}/>
         </article>
         
     )

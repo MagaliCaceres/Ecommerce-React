@@ -1,56 +1,194 @@
-.info_principal{
+.info_principal {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 120px 80px;
+    margin: 20px 80px;
 }
 
-.enlaces_atras a{
-    color: #e46322;
+/* LINKS ATRAS */
+.link_atras {
+    color: #fff;
     background-image: linear-gradient(currentColor, currentColor);
     background-position: 0% 100%;
     background-repeat: no-repeat;
     background-size: 0% 2px;
-    transition: background-size .3s;
+    transition: .3s;
 }
 
-.enlaces_atras a:hover,
-.enlaces_atras a:focus{
-    background-size: 100% 2px;
+.link_atras span {
+    padding: 0px 20px;
 }
 
-.contenedor_img{
+.link_atras:hover,
+.link_atras:focus {
+    background-size: 70% 2px;
+}
+
+/* IMAGEN */
+.contenedor_img {
     width: 700px;
 }
-.contenedor_img img{
+
+.contenedor_img img {
     height: 400px;
     margin: 20px 30px;
 }
 
-.contenedor_info{
+/* INFORMACIÓN */
+.contenedor_info {
     padding-left: 80px;
 }
 
-.info_nombre{
+.info_nombre {
     color: #e46322;
     margin: 6px 00px;
     font-size: 38px;
 }
 
-.info_precio{
+.info_precio {
     color: #fff;
     margin: 6px 00px;
     font-size: 30px;
     font-weight: 600;
 }
 
-.info_descripcion{
-    color: #fff;
+/* MODAL */
+
+/* texto */
+.formas_de_pago{
+    color: #859eb2;
+    text-decoration: underline;
+}
+
+/*Efecto*/
+.modalmask {
+    position: fixed;
+    font-family: Arial, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+
+.modalmask:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/*Formato de la ventana*/
+.modalbox {
+    width: 400px;
+    position: relative;
+    padding: 5px 20px 13px 20px;
+    background: #fff;
+    border-radius: 15px;
+    -webkit-transition: all 500ms ease-in;
+    -moz-transition: all 500ms ease-in;
+    transition: all 500ms ease-in;
+}
+
+.modalbox h2{
+    font-size: 22px;
+    padding: 15px 4px;
+    padding-bottom: 10px;
+    color: #d25a1e;
+    border-bottom: #27313981 solid 1px;
+}
+
+.info_modal{
+    margin: 10px 0px;
     font-size: 18px;
-    margin: 8px 00px;
+    
+}
+
+.info_modal h4,
+.info_modal p{
+    padding: 0px 6px;
+}
+
+.info_modal h4{
+    margin-top: 12px;
+}
+
+.info_modal p{
+    color: rgba(0, 0, 0, 0.646);
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+
+.plataformas_pago{
+    border: #27313981 solid 1px;
+    border-radius: 10px;
 }
 
 
+.plataformas_pago p{
+    color: #000;
+    margin-top: 10px;
+    padding: 0px 15px;
+    font-size: 1rem;
+}
+
+.plataformas_pago img{
+    height: 55px;
+    padding: 0px 4px;
+    margin-bottom: -8px;
+}
+
+
+
+/*Movimientos*/
+.movedown {
+    margin: 0 auto;
+}
+
+.modalmask:target .movedown {
+    margin: 10% auto;
+}
+
+
+/*Boton de cerrar*/
+.close {
+    color: #d25a1e;
+    line-height: 25px;
+    position: absolute;
+    right: 15px;
+    text-align: center;
+    top: 5px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.close:hover {
+    color: #273139;
+}
+
+/* DESCRIPCION */
+
+.info_descripcion{
+    padding: 0px 100px;
+    margin-top: -30px;
+    margin-bottom: 20px;
+}
+
+.info_descripcion h4{
+    font-size: 40px;
+    color: #e46322;
+}
+
+.info_descripcion p{
+    color: #fff;
+    font-size: 20px;
+}
 
 
 /* 

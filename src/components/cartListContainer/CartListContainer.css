@@ -1,0 +1,10 @@
+.contenedor_carrito{
+    padding: 20px;
+}
+
+.contenedor_carrito h2{
+    color: #d25a1e;
+    text-shadow: 0px 0px 3px #273139c3;
+    font-size: 60px;
+    margin-left: 40px;
+}

@@ -7,6 +7,7 @@ import { useState } from 'react'
 import './ItemCount.css'
 
 // Componentes
+import { BsCartPlus } from "react-icons/bs";
 
 
 // Core
@@ -15,24 +16,22 @@ import './ItemCount.css'
 //        LOGICA
 
 // Función constructora
-const ItemCount = (props) =>{
+const ItemCount = ({stock, initial, agregar}) =>{
     
     // Agrego un manejo de estado
-    const [contador , setContador] = useState(0);
+    const [contador , setContador] = useState(initial);
 
     // Funcion de sumar uno con un maximo de stock
     const sumarUno = () => {
-        if(contador < props.stock){
+        if(contador < stock){
             setContador(contador + 1)
-            props.cantidadAComprar(contador)
         }
     }
 
     // Funcion de restar 1 al contador seteando un minimo de 0
     const restarUno = () => {
-        if(contador > 0){
-            setContador(contador - 1)
-            props.cantidadAComprar(contador)
+        if(contador>1){
+            setContador(contador  -1)
         }
     }
 
@@ -41,9 +40,12 @@ const ItemCount = (props) =>{
     return(
         <div className='contador'>
             <div className='contador_cantidad'>
-                <button onClick={restarUno}>-</button>
+                <button disabled={stock===0} onClick={restarUno}>-</button>
                 <p>{contador}</p>
-                <button onClick={sumarUno}>+</button>
+                <button disabled={stock===0} onClick={sumarUno}>+</button>
+            </div>
+            <div className='contador_agregar'>
+                <button disabled={stock === 0} className='agregar_icono' onClick={()=>agregar(contador)}>Agregar al Carrito <BsCartPlus/></button>
             </div>
         </div>
     )

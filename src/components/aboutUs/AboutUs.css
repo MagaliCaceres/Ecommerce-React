@@ -32,7 +32,7 @@
 }
 
 .cabecera_imagen img{
-    width: 600px;
+    width: 580px;
     margin-top: -75px;
 }
 
@@ -54,8 +54,16 @@
 .nosotros_cartel{
     display: flex;
     justify-content: center;
-    background-color: #d25a1e;
-    padding: 40px;
-    font-size: 25px;
-    color: #273139;
+    padding: 8px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #d25a1e;
+}
+
+.pieDePagina_imagen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -80px;
+    margin-bottom: -50px;
 }

@@ -1,5 +1,6 @@
 .footer{
-    background-color: #273139;
+    margin-top: 20px;
+    background-color: #ce581dfe;
     width: 100%;
     padding: 20px 0px;
 }
@@ -15,7 +16,7 @@
 
 .footer_contact label,
 .contacto{
-    color: #d25a1e;
+    color: #273139;
     font-weight: 600;
     display: block;
     padding: 10px 0px;
@@ -27,7 +28,7 @@
     font-size: 18px;
     background-color: transparent;
     padding: 12px;
-    border: 1.5px solid #d25a1e;
+    border: 1.5px solid #273139;
     color: #273139;
 }
 
@@ -42,7 +43,7 @@
 }
 
 .contacto_info a{
-    color: #d25a1e;
+    color: #273139;
 }
 
 .contacto_info a:hover{
@@ -60,7 +61,7 @@
 }
 
 .redes_icon{
-    color: #d25a1e;
+    color: #273139;
     font-size: 25px;
 }
 
@@ -70,13 +71,13 @@
 }
 
 .footer_copyright{
-    border-top: 0.5px #d25a1e3e solid;
+    border-top: 0.5px #27313981 solid;
     margin: 0px 40px;
     margin-top: 20px;
 }
 
 .footer_copyright p{
-    color: #d25a1eba;
+    color: #273139;
     text-align: center;
     margin-top: 30px;
     font-size: 0.7rem;

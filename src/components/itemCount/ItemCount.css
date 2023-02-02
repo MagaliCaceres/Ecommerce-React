@@ -2,28 +2,40 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
+    border: #e46322 solid 2px;
     border-radius: 20px;
-    border: #27313957 solid 1px;
+    margin: 10px 200px;
 }
 
 .contador_cantidad p{
-    width: 60px;
+    width: 100px;
     color: #fff;
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 18px;
+        font-weight: 600;
     text-align: center;
 }
 
 .contador_cantidad button{
     border-color: transparent;
-    background-color: #e46322;
-    border-radius: 100px;
-    width: 36px;
-    color: #273139;
+    background-color: transparent;
+    width: 80px;
+    color: #e46322;
     font-weight: 600;
-    font-size: 25px;
+    font-size: 20px;
     cursor: pointer;
+}
+
+.stock_disponible{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: -10px;
+    color: #63829c;
+}
+
+.stock_disponible span{
+    font-weight: 600;
 }
 
 
@@ -31,11 +43,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 6px;
 }
 
 .contador_agregar button{
-    padding: 6px 80px;
+    padding: 6px 100px;
     margin-top: 20px;
     background-color: #e46322;
     color: #273139;
@@ -47,6 +58,9 @@
     cursor: pointer;
 }
 
+.agregar_icono{
+    font-size: 20px;
+}
 
 .contador_agregar button:hover{
     color: #efefef;

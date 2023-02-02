@@ -1,16 +1,24 @@
 //        IMPORTACIONES
 
 // Modulos
-import { Link } from 'react-router-dom'
 
 // Estilos
 import './Home.css'
 
 // Componentes
-import { BsVinyl } from "react-icons/bs";
-import { BsTruck } from "react-icons/bs";
+
+import { FaRecordVinyl } from "react-icons/fa";
+import { FaTruckMoving } from "react-icons/fa";
 import { GiCardboardBoxClosed } from "react-icons/gi";
 import { FaHandshake } from "react-icons/fa";
+import { FaGuitar } from "react-icons/fa";
+import { GiGuitarBassHead } from "react-icons/gi";
+import { GiDrumKit } from "react-icons/gi";
+import { GiMicrophone } from "react-icons/gi";
+import { GiGuitarHead } from "react-icons/gi";
+import { GiPianoKeys } from "react-icons/gi";
+import { GiViolin } from "react-icons/gi";
+import { BsFillPlayFill } from "react-icons/bs";
 
 
 
@@ -41,13 +49,44 @@ const Home = () =>{
                     </div>
                 </div>
             </main>
-            <div className='home_productos'>
-                <p>Productos</p>
+            <div className="contenedor_generos">
+                <div className='carta_genero'>
+                    <FaGuitar className="icono_genero"/>
+                    <p>Folk</p>
+                </div>
+                <div className='carta_genero'>
+                    <GiDrumKit className="icono_genero"/>
+                    <p>Indie</p>
+                </div>
+                <div className='carta_genero'>
+                    <GiGuitarBassHead className="icono_genero"/>
+                    <p>Funk</p>
+                </div>
+                <div className='carta_genero'>
+                    <GiMicrophone className="icono_genero"/>
+                    <p>Pop</p>
+                </div>
+                <div className='carta_genero'>
+                    <GiGuitarHead className="icono_genero"/>
+                    <p>Rock</p>
+                </div>
+                <div className='carta_genero'>
+                    <GiViolin className="icono_genero"/>
+                    <p>Clásica</p>
+                </div>
+                <div className='carta_genero'>
+                    <GiPianoKeys className="icono_genero"/>
+                    <p>R&B</p>
+                </div>
+                <div className='carta_genero'>
+                    <BsFillPlayFill className="icono_genero"/>
+                    <p>Directo</p>
+                </div>
             </div>
             <div className='tarjetas_info'>
                 <div className='tarjeta'>
                     <div>
-                        <BsVinyl className='tarjeta_icon'/>
+                        <FaRecordVinyl className='tarjeta_icon'></FaRecordVinyl>
                     </div>
                     <div className='tarjeta_info'>
                         <h3>Vinilos</h3>
@@ -56,12 +95,11 @@ const Home = () =>{
                 </div>
                 <div className='tarjeta'>
                     <div>
-                        <BsTruck className='tarjeta_icon'/>
+                        <FaTruckMoving className='tarjeta_icon'/>
                     </div>
                     <div className='tarjeta_info'>
                         <h3>Entregas</h3>
-                        <p>Envios a todos los rincones del país</p>
-                        <p>en menos de 72hs.</p>
+                        <p>Envios a todos los rincones del país en menos de 72hs.</p>
                     </div>
                 </div>
                 <div className='tarjeta'>

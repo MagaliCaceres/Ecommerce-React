@@ -9,18 +9,19 @@ import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import './index.css';
 
 // Componentes
+import CartProvider from './context/CartContext';
+
 import NavBar from './components/navbar/NavBar';
 import Home from './components/home/Home'
 import ItemListContainer from './components/itemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/itemDetailContainer/ItemDetailContainer';
 import AboutUs from './components/aboutUs/AboutUs'
-import Cart from './components/cart/Cart';
 import Footer from './components/footer/Footer';
-// import App from './App';
+import CartListContainer from './components/cartListContainer/CartListContainer';
+
 
 // Web vitales / Core
 import reportWebVitals from './reportWebVitals';
-
 
 
 
@@ -34,31 +35,33 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
 
-    <BrowserRouter>
+    <CartProvider>
 
-    <NavBar/>
+      <BrowserRouter>
 
-    <Routes>
+      <NavBar/>
 
-      <Route exact path='/' element={<Home/>}/>
+      <Routes>
 
-      <Route exact path='/productos' element={<ItemListContainer/>}/>
+        <Route exact path='/' element={<Home/>}/>
 
-      <Route exact path='/producto/:productoId' element={<ItemDetailContainer/>}/>
+        <Route exact path='/productos' element={<ItemListContainer/>}/>
 
-      <Route exact path='/categoria/:categoriaId' element={<ItemListContainer/>}/>
+        <Route exact path='/producto/:productoId' element={<ItemDetailContainer/>}/>
 
-      <Route exact path='/nosotros' element={<AboutUs/>}/>
+        <Route exact path='/categoria/:categoriaId' element={<ItemListContainer/>}/>
 
-      <Route exact path='/carrito' element={<Cart/>}/>
+        <Route exact path='/carrito' element={<CartListContainer/>}/>
 
-    </Routes>
+        <Route exact path='/nosotros' element={<AboutUs/>}/>
 
-    <Footer/>
+      </Routes>
 
-    </BrowserRouter>
+      <Footer/>
 
+      </BrowserRouter>
 
+    </CartProvider>
 
   </React.StrictMode>
 );

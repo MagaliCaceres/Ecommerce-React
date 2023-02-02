@@ -24,6 +24,9 @@ const NavBar = () =>{
     return(
 
         <header>
+            <div className='contenedor_publicidad'>
+                <p>💿 10% de DESCUENTO OFF en todos nuestros productos 💿</p>
+            </div>
             <nav className="navbar">
                 <div className="logo">
                     <Link to="/"><img alt="Logo Vinilo" src='/img/vibesLogo.png'></img></Link>
@@ -35,17 +38,15 @@ const NavBar = () =>{
                         <div className="dropdown">
                             <button className="menu_link_button menu_link">Categorias</button>     
                             <div className="dropdown-content">
-                                <Link to="/categoria/electronics">electronics</Link>
-                                <Link to="/categoria/jewelery">jewelery</Link>
-                                <Link to="/categoria/men's clothing">men's clothing</Link>
-                                <Link to="/categoria/women's clothing">women's clothing</Link>
+                                <Link to="/categoria/Vinilo">Vinilos</Link>
+                                <Link to="/categoria/Disco">Discos</Link>
                             </div>
                         </div>
                         <li className="menu_link"><Link to="/nosotros">Nosotros</Link></li>
                     </ul>
                 </div>
                 <div>
-                    <CardWidget cantidad = "3"/>
+                    <CardWidget/>
                 </div>
             </nav>
         </header>

@@ -2,20 +2,3 @@
     padding: 10px 0px;
     margin: 20px;
 }
-
-.encabezado_lista_productos h2 {
-    font-family: 'Exo', sans-serif;
-    margin-left: 30px;
-    font-size: 70px;
-    color: #d25a1e;
-    text-shadow: 1px 0px 2px #9b4909;
-}
-
-.encabezado_lista_productos p {
-    font-family: 'Exo', sans-serif;
-    margin-left: 30px;
-    font-size: 30px;
-    color: #fff;
-    text-shadow: -1px 0px 0.5px rgb(202, 202, 202);
-}
-

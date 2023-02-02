@@ -1,31 +1,42 @@
 //        IMPORTACIONES
 
 // Modulos
+import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { CartContext } from '../../context/CartContext';
 
 // Estilos
 import './CardWidget.css'
 
 
 // Componentes
-import { FaShoppingCart } from "react-icons/fa";
+import { BsCart2 } from "react-icons/bs";
+
 
 // Core
-
-
-
 
 //        LOGICA
 
 // Función constructora
-const CardWidget = (props) =>{    
+const CardWidget = () =>{  
+    
+    const {totalProductos, productoCarList} = useContext(CartContext);
+    
     return(
         <div className='carrito'>
-            <div>
-                <FaShoppingCart className='carrito_icon'/>
-            </div>
-            <div className='carrito_numero'>
-                {props.cantidad}
-            </div>
+            {
+                productoCarList.length > 0 &&
+                <>
+                    <div>
+                        <Link to="/cart">
+                            <BsCart2 className='carrito_icon'/>
+                        </Link>
+                    </div>
+                    <div className='carrito_numero'>
+                        {totalProductos()}
+                    </div>
+                </>
+            }
         </div>
     )
 }

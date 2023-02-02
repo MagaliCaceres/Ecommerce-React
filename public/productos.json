@@ -63,7 +63,7 @@
         "id": 5,
         "nombre": "Frenemy",
         "artista": "Altopalo",
-        "descripcion": "altopalo, incluye la primera función externa de la banda de Bartees Strange, así como la contribución de Dora Jar. Es un retrato franco de una banda que se enfrenta a sus propias fragilidades en aras de seguir adelante. Mejores amigos durante más de diez años, este álbum se sumerge en sus relaciones entre ellos y las tensiones y el dolor que conlleva un vínculo que se parece más a una hermandad.",
+        "descripcion": "Altopalo, incluye la primera función externa de la banda de Bartees Strange, así como la contribución de Dora Jar. Es un retrato franco de una banda que se enfrenta a sus propias fragilidades en aras de seguir adelante. Mejores amigos durante más de diez años, este álbum se sumerge en sus relaciones entre ellos y las tensiones y el dolor que conlleva un vínculo que se parece más a una hermandad.",
         "imagen": "/img/frenemyVinilo.png",
         "genero": "Indie",
         "publicacion": "23/9/22",
@@ -89,8 +89,6 @@
         "precio": 20000,
         "stock": 10
     },
-
-    
 
 
 

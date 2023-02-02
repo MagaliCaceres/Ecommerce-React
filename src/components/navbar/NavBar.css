@@ -2,6 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo:wght@500&display=swap');
 
 
+.contenedor_publicidad{
+    background-color: #d25a1e;
+    padding: 6px;
+    color: #273139;
+    font-weight: 600;
+    text-align: center;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+
 /* BARRA DE NAVEGACIÓN */
 .navbar{
     display: flex;

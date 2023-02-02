@@ -1,14 +1,16 @@
 //        IMPORTACIONES
 
 // Modulos
+import { useEffect, useState } from 'react'
+import { useParams } from "react-router-dom";
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { db } from "../../services/firebase";
 
 // Estilos
 import './ItemListContainer.css'
 
 // Componentes
 import ItemList from '../itemList/ItemList.js'
-
-
 // Core
 
 
@@ -17,13 +19,33 @@ import ItemList from '../itemList/ItemList.js'
 // Función constructora
 const ItemListContainer = () =>{
 
+    const {tipoProducto} = useParams();
+
+    const [productos, setProductos] = useState([]);
+
+    useEffect(() =>{
+
+        const getData = async() =>{
+            
+            const queryRef = tipoProducto ? query(collection(db,"listaDeProducto"), where("categoria","==", tipoProducto)) : collection(db, "listaDeProducto");       
+
+            // hacer la consulta
+            const response = await getDocs(queryRef)
+            const docsInfo = response.docs.map(doc =>{
+                const newDoc ={
+                    id:doc.id,
+                    ...doc.data()
+                }
+                return newDoc
+            });
+            setProductos(docsInfo)
+        }
+        getData();
+    },[tipoProducto])
+
     return(
         <div className='contenedor'>
-            <div className='encabezado_lista_productos'>
-                <h2>Productos</h2>
-                <p>Todos Nuestros Productos</p>
-            </div>
-            <ItemList/>
+            <ItemList item={productos}/>
         </div>
     )
 }
