@@ -18,11 +18,11 @@ import ItemDetailContainer from './components/itemDetailContainer/ItemDetailCont
 import AboutUs from './components/aboutUs/AboutUs'
 import Footer from './components/footer/Footer';
 import CartListContainer from './components/cartListContainer/CartListContainer';
+import Formulario from './components/formulario/Formulario';
 
 
 // Web vitales / Core
 import reportWebVitals from './reportWebVitals';
-
 
 
 
@@ -52,6 +52,8 @@ root.render(
         <Route exact path='/categoria/:categoriaId' element={<ItemListContainer/>}/>
 
         <Route exact path='/carrito' element={<CartListContainer/>}/>
+
+        <Route exact path='/compra' element={<Formulario/>}/>
 
         <Route exact path='/nosotros' element={<AboutUs/>}/>
 

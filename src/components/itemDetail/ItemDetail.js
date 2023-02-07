@@ -11,6 +11,7 @@ import './ItemDetail.css'
 
 // Componentes
 import ItemCount from '../itemCount/ItemCount'
+import { AiOutlineCheck } from "react-icons/ai";
 
 
 
@@ -44,15 +45,14 @@ const ItemDetail = ({item}) =>{
                     <Link className='link_atras' to="/productos"> {item.categoria}<span>/</span></Link>
                     <a className='link_atras' href='#!'> {item.nombre} - {item.artista}</a>
                 </div>
-                <p className='info_fecha'>Publicación: {item.publicacion}</p>
                 <h2 className='info_nombre'>{item.nombre} - {item.artista}</h2>
-                <p className='info_precio'>${item.price}</p>
+                <p className='info_precio'>$ {item.precio}</p>
                 <ul className='contenedor_info_lista'>
-                    <li className='lista_info_genero'>Género: <p>{item.genero}</p></li>
+                    <li className='lista_info_genero'>Género: <p>{item.categoria}</p></li>
                     <li className='lista_info_canciones'>Cantidad de Canciones: <p>{item.canciones}</p></li>
                     <li className='lista_info_duracion'>Duración: <p>{item.duracion}</p></li>
+                    <li className='info_fecha'>Publicación: <p className='info_fecha'>{item.publicacion}</p></li>
                     <li className='lista_info_sello'>Sello: <p>{item.sello}</p></li>
-                    <li className='lista_info_categoria'>Categoría: <p>{item.categoria}</p></li>
                 </ul>
                 <div>
                     <ul>
@@ -88,22 +88,18 @@ const ItemDetail = ({item}) =>{
                                 </div>
                             </div>
                             
-
-
                         </div>
                     </div>
                 </div>
-                <div className='carta_compra'>
-                    <ItemCount initial={1} stock={10} agregar={agregar}/>
-                {
-                    cantidad>0 &&
-                    <Link to="/carrito">
-                        <button>Ir al carrito</button>
-                    </Link>
-                }
-                    <div className='stock_disponible'>
+                <div className='stock_disponible'>
                         <p><span>{item.stock}</span> Unidades Disponibles</p>
-                    </div>
+                </div>
+                <div className='carta_compra'>
+                    <ItemCount initial={1} stock={item.stock} agregar={agregar}/>
+                    {
+                        cantidad >0 &&
+                        <p className='agregado_exitoso'><AiOutlineCheck className='check_correcto'/> ¡Producto Agregado con Exito!</p>
+                    }
                 </div>
             </div>
         </div>

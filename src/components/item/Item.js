@@ -22,7 +22,6 @@ const Item = ({item}) =>{
             <div className='carta_contenedor'>
                 <div className='carta_encabezado'>
                     <p>{item.categoria}</p> 
-                    <p>{item.genero}</p> 
                 </div>
                 <div className='carta_contenido'>
                     <div className='carta_img'>
@@ -36,8 +35,9 @@ const Item = ({item}) =>{
                                 <Link className='carta_nombre' to={`/producto/${item.id}` }>{item.nombre}</Link>
                                 <p className='carta_artista'>{item.artista}</p>
                             </div>
-                            <div>
+                            <div className='ver_mas'>
                                 <p className='carta_precio'>$ {item.precio}</p> 
+                                <Link className='link_vermas' to={`/producto/${item.id}` }>Detalles</Link>
                             </div>
                         </div>
                     </div>

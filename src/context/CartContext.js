@@ -19,12 +19,12 @@ const CartProvider = ({children})=>{
 
             newList[productoIndex].quantity = newList[productoIndex].quantity + qty;
 
-            newList[productoIndex].totalPrecio = newList[productoIndex].quantity * newList[productoIndex].precio;
+            newList[productoIndex].precioTotal = newList[productoIndex].quantity * newList[productoIndex].precio;
 
             setProductoCarList(newList)
 
         } else{
-            const newProducto={...producto, quantity:qty, totalPrecio: qty*producto.precio}
+            const newProducto={...producto, quantity:qty, precioTotal: qty*producto.precio}
             const newList = [...productoCarList];
             newList.push(newProducto);
             setProductoCarList(newList);
@@ -46,12 +46,20 @@ const CartProvider = ({children})=>{
         return totalProductos;
     }
 
+    const obtenerTotal = () => {
+        let total = 0
+        productoCarList.forEach((e) => total += (e.quantity*e.precio))
+        return total        
+    };
+
     return(
         <CartContext.Provider value={{productoCarList,
                                     agregarAlCarrito, 
                                     eliminarProducto, 
                                     vaciarCarrito, 
-                                    existeEnElCarrito, totalProductos}}>
+                                    existeEnElCarrito, 
+                                    totalProductos,
+                                    obtenerTotal}}>
             {children}
         </CartContext.Provider>
     )

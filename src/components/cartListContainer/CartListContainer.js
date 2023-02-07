@@ -1,26 +1,57 @@
 //        IMPORTACIONES
 
 // Modulos
+import { useContext } from 'react';
+import { CartContext } from '../../context/CartContext';
+import { Link } from 'react-router-dom';
 
 // Estilos
 import './CartListContainer.css'
 
 // Componentes
-import CartList from '../cartList/CartList'
+import CartItem from "../cartItem/CartItem"
+import { BsCart2 } from "react-icons/bs";
 
 // Core
-import { BsCart2 } from "react-icons/bs";
 
 
 //        LOGICA
 
 // Función constructora
 const CartListContainer = () =>{
-    
+
+    const {productoCarList,vaciarCarrito,obtenerTotal} = useContext(CartContext);
+
+
     return(
-    <div className='contenedor_carrito'>
-        <h2>Carrito <BsCart2/></h2>
-        <CartList/>
+        <div>
+            <div className='encabezado_carrito'>
+                <h3>Carrito de Compras <BsCart2/></h3>
+            </div>
+            <div className="vaciar_carrito">
+                <button onClick={vaciarCarrito} >Vaciar Carrito</button>
+            </div>
+            <div className='productos_carrito'>
+                {
+                productoCarList.length > 0 ?
+                <div>
+                    {
+                        productoCarList.map( item => (
+                        <CartItem key={item.id} item={item}/>
+                        ))
+                    }
+                    <div className='datos_finales'>
+                        <p>Monto final : ${obtenerTotal()}</p>
+                    </div>
+                    <div className='comprar'>
+                        <Link to="/productos" className='seguir_comprando'>Seguir Compando</Link>
+                        <Link to="/compra"><button>Continuar La Compra</button></Link>
+                    </div>
+                </div>
+                :
+                <p className='carrito_vacio'>No has agregado productos.</p>
+                }
+            </div>
     </div>
     )
 }

@@ -1,104 +1,12 @@
-/* .carta{
-    margin: 20px 10px;
-    padding: 0px 20px;
-    width: 90%;
-    height: 100%;
-}
-
-.carta_contenedor{
-    background-color: #fff;
-    padding: 20px 6px;
-    box-shadow: 0.5px 0.9px 2px #8ab1cc;
-    border-radius: 30px;
-}
-
-.carta_contenedor:hover{
-    box-shadow: -3px 0.5px 10px #476073;
-}
-
-.carta_encabezado {
-    margin: 0px 10px;
-    display: flex-end;
-    justify-content: end;
-}
-
-.carta_encabezado p{
-    display: inline;
-    padding: 1px 12px;
-    margin: 0px 6px;
-    color: #e46322;
-    border-radius: 10px;
-    background-color: #273139;
-    font-size: 0.7rem;
-    text-shadow: 0px 0px 1px #9b4909;
-}
-
-.carta_contenido{
-    display: flex;
-    justify-content: space-around;
-    margin-top: 10px;
-    text-align: center;
-}
-
-.carta_img img{
-    width: 200px;
-    margin: 10px;
-}
-
-.carta_contenedor_texto{
-    display: flex;
-    justify-content: center;
-    align-self: center;
-}
-
-.carta_nombre{
-    padding: 0px 30px;
-    font-size: 30px;
-    color: #e46322;
-    font-weight: 600;
-    text-shadow: 0.5px 0px 0px #602c05;
-    
-}
-
-.carta_nombre:hover{
-    color: #273139;
-}
-
-.carta_desc{
-    padding: 10px 100px;
-    font-size: 20px;
-}
-
-.carta_precio{
-    color: #e46322;
-    text-shadow: 1px 0px 1px #192025;
-    font-size: 26px;
-    font-weight: 600;
-    text-align: end;
-    margin-right: 40px;
-} */
-
-
-
-
 .carta{
-    display: inline-block;
-    margin: 0px 10px;
-    padding: 10px 20px;
-    width: 20%;
-    margin-left: 12px;
+    padding: 2px;
 }
 
 
 .carta_contenedor{
-    background-color: rgb(230, 230, 230);
-    padding: 20px 6px;
-    box-shadow: 0.5px 0.9px 2px #8ab1cc;
-    border-radius: 30px;
-}
-
-.carta_contenedor:hover{
-    box-shadow: -3px 0.5px 10px #476073;
+    background-color: rgba(255, 255, 255, 0.745);
+    padding: 20px 4px;
+    margin-bottom: 30px;
 }
 
 .carta_encabezado {
@@ -117,9 +25,8 @@
 }
 
 .carta_img img{
-    width: 95%;
-    height: 100%;
-    margin: 10px;
+    width: 90%;
+    margin: 10px 25px;
 }
 
 .carta_info p{
@@ -133,10 +40,10 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 25px;
+    font-size: 22px;
     color: #e46322;
     font-weight: 600;
-    text-shadow: 0.5px 0px 0px #602c05;
+    text-shadow: 0.5px 0px 1px #000000;
 }
 
 .carta_nombre:hover{
@@ -144,22 +51,37 @@
 }
 
 .carta_artista{
+    margin-top: 2px;
     font-size: 20px;
     color: #273139;
     text-shadow: -0.1px 0px 0.5px #192025;
 }
 
+.ver_mas{
+    display: flex;
+    justify-content: space-around;
+}
 
-.carta_compra {
-    padding: 6px 20px;
+.link_vermas{
+    color: #e46322;
+    font-weight: 600;
+    margin-top: 18px;
+    background-color: #273139;
+    padding: 2px 6px;
+    border-radius: 10px;
+}
+
+.link_vermas:hover{
+    color: #fff;
 }
 
 .carta_precio{
     color: #e46322;
-    text-shadow: 1px 0px 1px #192025;
-    font-size: 26px;
+    text-shadow: 0px 1px 2px #000000;
+    font-size: 25px;
     font-weight: 600;
     text-align: center;
     margin-top: 10px;
+    padding: 0px 20px;
 }
 

@@ -5,7 +5,7 @@
 }
 
 .botones_categorias button{
-    width: 300px;
+    width: 90%;
     padding: 4px;
     font-size: 18px;
     background-color: #d25a1e;
@@ -23,4 +23,12 @@
 
 .link_categoria:focus{
     color: #fff;
+}
+
+.cartas_productos{
+    padding: 0px 50px;
+    display: grid; 
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr; 
+    grid-template-rows: 4fr; 
+    gap: 10px; 
 }

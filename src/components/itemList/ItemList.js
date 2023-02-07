@@ -32,48 +32,49 @@ const ItemList = ({item}) =>{
         <div className='contenedor_productos'>
             <div>
                 <div className='botones_categorias'>
-                    <button><Link to="/categoria/Discos" className='link_categoria'>Discos</Link></button>
-                    <button><Link to="/categoria/Vinilos" className='link_categoria'>Vinilos</Link></button>
+                    <button><Link to="/productos" className='link_categoria'>Todos</Link></button>
                 </div>
                 <div className="contenedor_generos">
                     <div className='carta_genero'>
-                        <FaGuitar className="icono_genero"/>
-                        <p>Folk</p>
+                        <Link to="/categoria/Folk" className='genero_nombre'><FaGuitar className="icono_genero"/></Link>
+                        <p><Link to="/categoria/Folk" className='genero_nombre'>Folk</Link></p>
                     </div>
                     <div className='carta_genero'>
-                        <GiDrumKit className="icono_genero"/>
-                        <p>Indie</p>
+                        <Link to="/categoria/Indie" className='genero_nombre'><GiDrumKit className="icono_genero"/></Link>
+                        <p><Link to="/categoria/Indie" className='genero_nombre'>Indie</Link></p>
                     </div>
                     <div className='carta_genero'>
-                        <GiGuitarBassHead className="icono_genero"/>
-                        <p>Funk</p>
+                        <Link to="/categoria/Funk" className='genero_nombre'><GiGuitarBassHead className="icono_genero"/></Link>
+                        <p><Link to="/categoria/Funk" className='genero_nombre'>Funk</Link></p>
                     </div>
                     <div className='carta_genero'>
-                        <GiMicrophone className="icono_genero"/>
-                        <p>Pop</p>
+                        <Link to="/categoria/Pop" className='genero_nombre'><GiMicrophone className="icono_genero"/></Link>
+                        <p><Link to="/categoria/Pop" className='genero_nombre'>Pop</Link></p>
                     </div>
                     <div className='carta_genero'>
-                        <GiGuitarHead className="icono_genero"/>
-                        <p>Rock</p>
+                        <Link to="/categoria/Rock" className='genero_nombre'><GiGuitarHead className="icono_genero"/></Link>
+                        <p><Link to="/categoria/Rock" className='genero_nombre'>Rock</Link></p>
                     </div>
                     <div className='carta_genero'>
-                        <GiViolin className="icono_genero"/>
-                        <p>Clásica</p>
+                        <Link to="/categoria/Clasica" className='genero_nombre'><GiViolin className="icono_genero"/></Link>
+                        <p><Link to="/categoria/Clasica" className='genero_nombre'>Clasica</Link></p>
                     </div>
                     <div className='carta_genero'>
-                        <GiPianoKeys className="icono_genero"/>
-                        <p>R&B</p>
+                        <Link to="/categoria/R&B" className='genero_nombre'><GiPianoKeys className="icono_genero"/></Link>
+                        <p><Link to="/categoria/R&B" className='genero_nombre'>R&B</Link></p>
                     </div>
                     <div className='carta_genero'>
-                        <BsFillPlayFill className="icono_genero"/>
-                        <p>Directo</p>
+                        <Link to="/categoria/Directo" className='genero_nombre'><BsFillPlayFill className="icono_genero"/></Link>
+                        <p><Link to="/categoria/Directo" className='genero_nombre'>Directo</Link></p>
                     </div>
                 </div>
+                <div className='cartas_productos'>
                 {
                     item.map(producto=>(
                         <Item key={producto.id} item={producto}/>
                 ))
             }
+                </div>
             </div>
         </div>
     )

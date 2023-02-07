@@ -38,8 +38,14 @@ const NavBar = () =>{
                         <div className="dropdown">
                             <button className="menu_link_button menu_link">Categorias</button>     
                             <div className="dropdown-content">
-                                <Link to="/categoria/Vinilo">Vinilos</Link>
-                                <Link to="/categoria/Disco">Discos</Link>
+                                <Link to="/categoria/Folk">Folk</Link>
+                                <Link to="/categoria/Indie">Indie</Link>
+                                <Link to="/categoria/Funk">Funk</Link>
+                                <Link to="/categoria/Pop">Pop</Link>
+                                <Link to="/categoria/Rock">Rock</Link>
+                                <Link to="/categoria/Clasica">Clasica</Link>
+                                <Link to="/categoria/R&B">R&B</Link>
+                                <Link to="/categoria/Directo">Directo</Link>
                             </div>
                         </div>
                         <li className="menu_link"><Link to="/nosotros">Nosotros</Link></li>

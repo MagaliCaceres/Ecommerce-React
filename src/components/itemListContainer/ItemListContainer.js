@@ -17,38 +17,43 @@ import ItemList from '../itemList/ItemList.js'
 //        LOGICA
 
 // Función constructora
-const ItemListContainer = () =>{
-
-    const {tipoProducto} = useParams();
+// Función constructora
+const ItemListContainer = () => {
+    const { categoriaId } = useParams();
 
     const [productos, setProductos] = useState([]);
 
-    useEffect(() =>{
-
-        const getData = async() =>{
-            
-            const queryRef = tipoProducto ? query(collection(db,"listaDeProducto"), where("categoria","==", tipoProducto)) : collection(db, "listaDeProducto");       
+    useEffect(() => {
+        const getData = async () => {
+            const queryRef = categoriaId
+                ? query(
+                    collection(db, "listaDeProducto"),
+                    where("categoria", "==", categoriaId)
+                )
+                : collection(db, "listaDeProducto");
 
             // hacer la consulta
-            const response = await getDocs(queryRef)
-            const docsInfo = response.docs.map(doc =>{
-                const newDoc ={
-                    id:doc.id,
-                    ...doc.data()
-                }
-                return newDoc
+            const response = await getDocs(queryRef);
+            const docsInfo = response.docs.map((doc) => {
+                const newDoc = {
+                    id: doc.id,
+                    ...doc.data(),
+                };
+                return newDoc;
             });
-            setProductos(docsInfo)
-        }
+            setProductos(docsInfo);
+        };
         getData();
-    },[tipoProducto])
+    }, [categoriaId]);
 
-    return(
+    return (
         <div className='contenedor'>
-            <ItemList item={productos}/>
+            <ItemList item={productos} />
         </div>
-    )
-}
+    );
+};
+
+
 
 
 //        EXPORTACIÓN

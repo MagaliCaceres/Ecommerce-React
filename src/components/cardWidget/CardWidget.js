@@ -24,14 +24,14 @@ const CardWidget = () =>{
     
     return(
         <div className='carrito'>
+            <div>
+                <Link to="/carrito">
+                    <BsCart2 className='carrito_icon'/>
+                </Link>
+            </div>
             {
                 productoCarList.length > 0 &&
                 <>
-                    <div>
-                        <Link to="/cart">
-                            <BsCart2 className='carrito_icon'/>
-                        </Link>
-                    </div>
                     <div className='carrito_numero'>
                         {totalProductos()}
                     </div>
