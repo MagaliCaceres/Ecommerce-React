@@ -28,7 +28,7 @@ const Formulario = () =>{
         const queryRef = collection(db,"ordenes")
         const response = await addDoc(queryRef, orden)
         setOrdenId(response.id)
-        alert(`Tu compra se realizó con exito su id es: ${response.id}`)
+        // alert(`Tu compra se realizó con exito su id es: ${response.id}`)
         vaciarCarrito()
     }
 
@@ -70,7 +70,7 @@ const Formulario = () =>{
                 // ERROR EMAIL
                 if(!valores.email){
                     errores.email= 'Por favor, ingresa un email.'
-                } else if(!/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(valores.email)){
+                } else if(!/^(([^<>()[\].,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(valores.email)){
                     errores.email= 'El email no es valido.'
                 }
 
@@ -121,10 +121,6 @@ const Formulario = () =>{
 
             onSubmit={ ( valores, {resetForm}) =>{
 
-                    // items del carrito
-                    const items = productoCarList;
-                    
-                    
                     // objeto con los items y datos del usuario
                     const nuevaOrden = {
                             comprador:{
@@ -144,8 +140,6 @@ const Formulario = () =>{
                     resetForm();
                     enviarOrden(nuevaOrden)
                     cambiarFormularioEnviado(true)
-                    // return errores
-                    // setTimeout(() => cambiarFormularioEnviado(false), 10000)
             }}>
 
             {( { errors} ) => (
@@ -324,19 +318,24 @@ const Formulario = () =>{
                             <div className='datos_finales'>
                                 <p>Monto final : ${obtenerTotal()}</p>
                             </div>
+                        </div>
 
-                            {/* BOTON FINALIZAR COMPRA */}
-                            <div className='boton_enviar'>
+
+                        {/* BOTON FINALIZAR COMPRA */}
+                        <div className='boton_enviar'>
                                 <button type='sumbit'>Finalizar Compra</button>
                                 {
                                     formularioEnviado &&
                                         <div className='exito'>
-                                            <p> Formulario enviado con exito.</p>
-                                            <p> Su orden es: {ordenId}</p>
+                                            <div className='resumen_de_compra'>
+                                                <h4>¡Compra Exitosa!</h4>
+                                                <p className='numero_orden'> <span>Su número de orden es:</span>  {ordenId}</p>
+                                                {/* datos del usuario */}
+                                                
+                                            </div>
                                         </div>
                                 }
                             </div>
-                        </div>
                     </div>
 
 

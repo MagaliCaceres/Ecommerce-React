@@ -81,27 +81,6 @@ option{
     margin-bottom: 8px;
 }
 
-.boton_enviar{
-    display: block;
-    text-align: end;
-    margin-top: 10px;
-}
-
-.boton_enviar button{
-    background-color: #d25a1e;
-    border: none;
-    padding: 4px 10px;
-    border-radius: 20px;
-    color: #fff;
-    font-weight: 600;
-    letter-spacing: 2px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.boton_enviar button:hover{
-    color: #273139;
-}
 
 /* ERRORES */
 .error{
@@ -145,7 +124,52 @@ option{
 
 
 /* EXITO */
+.boton_enviar{
+    display: block;
+    margin-top: 10px;
+    margin-left: 460px;
+}
+
+.boton_enviar button{
+    background-color: #d25a1e;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 2px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.boton_enviar button:hover{
+    color: #273139;
+}
+
 .exito{
+    margin-top: -150px;
+    background-color: #d25a1e;
+    margin-left: 200px;
+    height: 300px;
+}
+
+.resumen_de_compra{
+    padding: 10px;
+    text-align: center;
+}
+
+.resumen_de_compra h4{
+    color: #273139;
+    font-size: 28px;
+}
+
+.numero_orden{
     color: #fff;
     font-size: 20px;
+    margin-top: 8px;
+}
+
+.numero_orden span{
+    color: #273139;
+    font-weight: 600;
 }
