@@ -5,6 +5,8 @@ import { useEffect, useState} from 'react'
 import { useParams } from 'react-router-dom'
 import { doc, getDoc } from "firebase/firestore"
 import { db } from "../../services/firebase"
+import Cargando from '../cargando/Cargando';
+
 
 // Estilos
 import './ItemDetailContainer.css'
@@ -37,11 +39,28 @@ const ItemDetailContainer = () =>{
         getProducto();
     },[productoId])
 
+    // cargando...
+    const [cargando, setCargando] = useState(false);
+
+    useEffect(() => {
+        setCargando(true);
+        setTimeout(() => {
+        setCargando(false);
+        }, 1000);
+    }, []);
+
     return(
-        <article>
-            <ItemDetail item={item}/>
-        </article>
-        
+        <div>
+            {cargando ? (
+            <   Cargando/>
+            ) : (
+                <div>
+                    <article>
+                        <ItemDetail item={item}/>
+                    </article>
+                </div>
+            )}
+        </div>
     )
 }
 

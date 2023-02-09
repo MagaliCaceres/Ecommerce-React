@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 import { useParams } from "react-router-dom";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../../services/firebase";
+import Cargando from '../cargando/Cargando';
 
 // Estilos
 import './ItemListContainer.css'
@@ -46,14 +47,27 @@ const ItemListContainer = () => {
         getData();
     }, [categoriaId]);
 
+    // cargando...
+    const [cargando, setCargando] = useState(false);
+
+    useEffect(() => {
+        setCargando(true);
+        setTimeout(() => {
+        setCargando(false);
+        }, 2000);
+    }, []);
+    
     return (
         <div className='contenedor'>
-            <ItemList item={productos} />
+
+            {cargando ? (
+                <Cargando/>
+            ) : (
+                <ItemList item={productos} />
+            )}
         </div>
     );
 };
-
-
 
 
 //        EXPORTACIÓN

@@ -1,0 +1,12 @@
+.cargando{
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cargando_svg{
+    width: 150px;
+    margin: 100px 0px;
+}
