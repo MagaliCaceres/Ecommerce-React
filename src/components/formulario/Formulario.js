@@ -17,43 +17,30 @@ import './Formulario.css'
 // Función constructora
 const Formulario = () =>{
 
-    const {productoCarList, obtenerTotal} = useContext(CartContext);
+    const {productoCarList, obtenerTotal, vaciarCarrito} = useContext(CartContext);
 
     const [ordenId, setOrdenId] = useState(undefined)
     
     const [formularioEnviado, cambiarFormularioEnviado] = useState(false)
 
-    // const enviarOrden = async(event) => {
-    //     const nuevaOrden = {
-    //         comprador:{
-    //             nombre: valores.nombre,
-    //             telefono: valores.telefono,
-    //             email:valores.email,
-    //             provincia: valores.provincia,
-    //             localidad: valores.localidad,
-    //             calle: valores.calle,
-    //             numeroCalle: valores.numero,
-    //             codigoPostal: valores.postal,
-    //             datoComprobante: {ordenId}
-    //         },
-    //         items: productoCarList,
-    //         total: obtenerTotal(),
-    //     }
-    //     console.log(nuevaOrden)
-    //     const queryRef = collection(db,"ordenes")
-    //     const response = await addDoc(queryRef, nuevaOrden)
-    //     setOrdenId(response.id)
-    // }
+    const enviarOrden = async(orden) => {
+
+        const queryRef = collection(db,"ordenes")
+        const response = await addDoc(queryRef, orden)
+        setOrdenId(response.id)
+        alert(`Tu compra se realizó con exito su id es: ${response.id}`)
+        vaciarCarrito()
+    }
 
     return(
         <Formik
             initialValues={{
-                nombre: ' ',
+                nombre:'',
                 telefono:'',
                 email:'',
                 provincia:'',
-                localidad:'',
                 calle:'',
+                localidad:'',
                 numero:'',
                 postal:'',
                 metodoPago:'',
@@ -61,76 +48,79 @@ const Formulario = () =>{
                 datoFacturacion:'',
             }}
 
+            validate={(valores) => {
+
+                // validaciones de los datos que ingreso el usuario
+                let errores = {}
+
+                // ERROR NOMBRE
+                if(!valores.nombre){
+                    errores.nombre= 'Por favor, ingresa un nombre y apellido.'
+                } else if(!/^[a-zA-ZÀ-ÿ\s]{1,25}$/.test(valores.nombre)){
+                    errores.nombre= 'Solo deben ingresarse letras o espacios.'
+                }
+
+                // ERROR TELEFONO
+                if(!valores.telefono){
+                    errores.telefono= 'Por favor, ingresa un número de telefono.'
+                } else if(!/^(?:(?:00)?549?)?0?(?:11|[2368]\d)(?:(?=\d{0,2}15)\d{2})??\d{8}$/.test(valores.telefono)){
+                    errores.telefono= 'El número no es valido.'
+                }
+
+                // ERROR EMAIL
+                if(!valores.email){
+                    errores.email= 'Por favor, ingresa un email.'
+                } else if(!/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(valores.email)){
+                    errores.email= 'El email no es valido.'
+                }
+
+                // ERROR PROVINCIA
+                if(!valores.provincia){
+                    errores.provincia= 'Por favor, ingresa una provincia.'
+                } else if(!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(valores.provincia)){
+                    errores.provincia= 'Solo deben ingresarse letras o espacios.'
+                }
+
+                // ERROR PROVINCIA
+                if(!valores.localidad){
+                    errores.localidad= 'Por favor, ingresa una localidad.'
+                } else if(!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(valores.localidad)){
+                    errores.localidad= 'Solo deben ingresarse letras o espacios.'
+                }
+
+                // ERROR PROVINCIA
+                if(!valores.calle){
+                    errores.calle= 'Por favor, ingresa una calle.'
+                } else if(!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(valores.calle)){
+                    errores.calle= 'Solo deben ingresarse letras o espacios.'
+                }
+
+                // ERROR NÚMERO DE CALLE
+                if(!valores.numero){
+                    errores.numero= 'Por favor, ingresa el número de la calle.'
+                } else if(!/^[0-9]{1,5}$/.test(valores.numero)){
+                    errores.numero= 'El número no es valido.'
+                }
+
+                // ERROR CODIGO POSTAL
+                if(!valores.postal){
+                    errores.postal= 'Por favor, ingresa el codigo postal.'
+                } else if(!/^[0-9]{1,4}$/.test(valores.postal)){
+                    errores.postal= 'El codigo postal no es valido.'
+                }
+
+                // ERROR DNI
+                if(!valores.datoFacturacion){
+                    errores.datoFacturacion= 'Por favor, ingresa el DNI.'
+                } else if(!/^[\d]{1,3}\.?[\d]{3,3}\.?[\d]{3,3}$/.test(valores.datoFacturacion)){
+                    errores.datoFacturacion= 'El DNI no es valido.'
+                }
+
+                return errores
+            }}
+
             onSubmit={ ( valores, {resetForm}) =>{
 
-                    // validaciones de los datos que ingreso el usuario
-                    let errores = {}
-    
-                    // ERROR NOMBRE
-                    // if(!valores.nombre){
-                    //     errores.nombre= 'Por favor, ingresa un nombre y apellido.'
-                    // } else if(!/^[a-zA-ZÀ-ÿ\s]{1,25}$/.test(valores.nombre)){
-                    //     errores.nombre= 'Solo deben ingresarse letras o espacios.'
-                    // }
-    
-                    // // ERROR TELEFONO
-                    // if(!valores.telefono){
-                    //     errores.telefono= 'Por favor, ingresa un número de telefono.'
-                    // } else if(!/^(?:(?:00)?549?)?0?(?:11|[2368]\d)(?:(?=\d{0,2}15)\d{2})??\d{8}$/.test(valores.telefono)){
-                    //     errores.telefono= 'El número no es valido.'
-                    // }
-    
-                    // // ERROR EMAIL
-                    // if(!valores.email){
-                    //     errores.email= 'Por favor, ingresa un email.'
-                    // } else if(!/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(valores.email)){
-                    //     errores.email= 'El email no es valido.'
-                    // }
-    
-                    // // ERROR PROVINCIA
-                    // if(!valores.provincia){
-                    //     errores.provincia= 'Por favor, ingresa una provincia.'
-                    // } else if(!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(valores.provincia)){
-                    //     errores.provincia= 'Solo deben ingresarse letras o espacios.'
-                    // }
-    
-                    // // ERROR PROVINCIA
-                    // if(!valores.localidad){
-                    //     errores.localidad= 'Por favor, ingresa una localidad.'
-                    // } else if(!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(valores.localidad)){
-                    //     errores.localidad= 'Solo deben ingresarse letras o espacios.'
-                    // }
-    
-                    // // ERROR PROVINCIA
-                    // if(!valores.calle){
-                    //     errores.calle= 'Por favor, ingresa una calle.'
-                    // } else if(!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(valores.calle)){
-                    //     errores.calle= 'Solo deben ingresarse letras o espacios.'
-                    // }
-    
-                    // // ERROR NÚMERO DE CALLE
-                    // if(!valores.numero){
-                    //     errores.numero= 'Por favor, ingresa el número de la calle.'
-                    // } else if(!/^[0-9]{1,5}$/.test(valores.numero)){
-                    //     errores.numero= 'El número no es valido.'
-                    // }
-    
-                    // // ERROR CODIGO POSTAL
-                    // if(!valores.postal){
-                    //     errores.postal= 'Por favor, ingresa el codigo postal.'
-                    // } else if(!/^[0-9]{1,4}$/.test(valores.postal)){
-                    //     errores.postal= 'El codigo postal no es valido.'
-                    // }
-    
-                    // // ERROR DNI
-                    // if(!valores.datoFacturacion){
-                    //     errores.datoFacturacion= 'Por favor, ingresa el DNI.'
-                    // } else if(!/^[\d]{1,3}\.?[\d]{3,3}\.?[\d]{3,3}$/.test(valores.datoFacturacion)){
-                    //     errores.datoFacturacion= 'El DNI no es valido.'
-                    // }
-                    
-                    // 
-                    
                     // items del carrito
                     const items = productoCarList;
                     
@@ -145,20 +135,17 @@ const Formulario = () =>{
                                 localidad: valores.localidad,
                                 calle: valores.calle,
                                 numeroCalle: valores.numero,
-                                codigoPostal: valores.postal,
-                                datoComprobante: {ordenId}
+                                codigoPostal: valores.postal
                             },
                             items: productoCarList,
                             total: obtenerTotal(),
                     }
 
-
                     resetForm();
-                    console.log("Formulario enviado.")
+                    enviarOrden(nuevaOrden)
                     cambiarFormularioEnviado(true)
-                    setTimeout(() => cambiarFormularioEnviado(false), 10000)
-                    
-                    return errores
+                    // return errores
+                    // setTimeout(() => cambiarFormularioEnviado(false), 10000)
             }}>
 
             {( { errors} ) => (
@@ -341,11 +328,11 @@ const Formulario = () =>{
                             {/* BOTON FINALIZAR COMPRA */}
                             <div className='boton_enviar'>
                                 <button type='sumbit'>Finalizar Compra</button>
-                                {/* <button type='sumbit' onClick={enviarOrden}>Finalizar Compra</button> */}
                                 {
                                     formularioEnviado &&
                                         <div className='exito'>
                                             <p> Formulario enviado con exito.</p>
+                                            <p> Su orden es: {ordenId}</p>
                                         </div>
                                 }
                             </div>
