@@ -25,7 +25,7 @@ const NavBar = () =>{
 
         <header>
             <div className='contenedor_publicidad'>
-                <p>💿 10% de DESCUENTO OFF en todos nuestros productos 💿</p>
+                <p>💿 Bienvenidos a tu COMUNIDAD MELOMANA Favorita 💿</p>
             </div>
             <nav className="navbar">
                 <div className="logo">
