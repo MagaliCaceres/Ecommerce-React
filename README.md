@@ -1,6 +1,6 @@
 # Vibes Vinyl - Tienda de Vinilos
 
-![](../tienda/public/img/nosotrosLogo.png)
+![](https://github.com/MagaliCaceres/Ecommerce-React/blob/master/public/img/nosotrosLogo.png)
 
 ## Sobre Este Proyecto
 ##### "Vibes Vinyl" es la creación de un proyecto académico que simula una tienda virtual o eCommerce.
@@ -25,7 +25,7 @@ Este consiste en:
 
 
 ## Tecnologias Usadas
-![](../tienda/public/img/tecnologias.png)
+![](https://github.com/MagaliCaceres/Ecommerce-React/blob/master/public/img/tecnologias.png)
 
 Para la creación del proyecto se hizo uso al editor de código fuente "Visual Studio Code", donde mediante el uso de la libreria de JavaScript, "React", a traves de la creación de distintos componentes, lograr la modificación de la vista de cada uno de estos para un desarrollo mas optico.
 
@@ -46,7 +46,7 @@ Tambien hacemos uso de "Formik", una librería declarativa, intuitiva y adaptabl
 #### - Sitio Web:
 [http://vinyl-vybes.netlify.app/](http://vinyl-vybes.netlify.app/)
 
-![](../tienda/public/img/Captura.png)
+![](https://github.com/MagaliCaceres/Ecommerce-React/blob/master/public/img/Captura.png)
 
 #### - Repositorio GitHub:
 
@@ -61,13 +61,13 @@ Tambien hacemos uso de "Formik", una librería declarativa, intuitiva y adaptabl
 4. Abrir carpeta en un editor de código fuente.
 
 # Visuales
-![](../tienda/public/img/Captura.png)
+![](https://github.com/MagaliCaceres/Ecommerce-React/blob/master/public/img/Captura.png)
 
-![](../tienda/public/img/Captura2.png)
+![](https://github.com/MagaliCaceres/Ecommerce-React/blob/master/public/img/Captura2.png)
 
-![](../tienda/public/img/Captura3.png)
+![](https://github.com/MagaliCaceres/Ecommerce-React/blob/master/public/img/Captura3.png)
 
-![](../tienda/public/img/Captura4.png)
+![](https://github.com/MagaliCaceres/Ecommerce-React/blob/master/public/img/Captura4.png)
 
 # Autores
 - Magali Caceres
